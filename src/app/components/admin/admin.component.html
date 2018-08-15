@@ -1,0 +1,56 @@
+<div class="playingCards fourColours simpleCards inText">
+<div class="container">
+  <th>
+    <a [routerLink]="['']"><button type="submit" class="btn btn-primary" >New Poker Hand!</button></a>
+  </th>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>User Name</th>
+      <th>Card 1</th>
+      <th>Card 2</th>
+      <th>Card 3</th>
+      <th>Card 4</th>
+      <th>Card 5</th>
+      <th>Result</th>
+    </tr>
+    <tr *ngFor="let h of hand">
+      <td>
+        {{h.userName}}
+      </td>
+      <td>
+        <div class= {{getSuit(h.card1)}}>
+          <span class="rank">{{getRank(h.card1)}}</span>
+          <span class="suit">{{h.card1 | DecodeHtmlPipe}}</span>
+        </div>
+      </td>
+      <td>
+        <div class= {{getSuit(h.card2)}}>
+          <span class="rank">{{getRank(h.card2)}}</span>
+          <span class="suit">{{h.card2 | DecodeHtmlPipe}}</span>
+        </div>
+      </td>
+      <td>
+        <div class= {{getSuit(h.card3)}}>
+          <span class="rank">{{getRank(h.card3)}}</span>
+          <span class="suit">{{h.card3 | DecodeHtmlPipe}}</span>
+        </div>
+      </td>
+      <td>
+        <div class= {{getSuit(h.card4)}}>
+          <span class="rank">{{getRank(h.card4)}}</span>
+          <span class="suit">{{h.card4 | DecodeHtmlPipe}}</span>
+        </div>
+      </td>
+      <td>
+        <div class= {{getSuit(h.card5)}}>
+          <span class="rank">{{getRank(h.card5)}}</span>
+          <span class="suit">{{h.card5 | DecodeHtmlPipe}}</span>
+        </div>
+      </td>
+      <td>
+        {{h.resultStr}}
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

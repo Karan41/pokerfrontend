@@ -1,0 +1,26 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Courier New', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  background: linear-gradient(150deg, #e6f1ec 15%, #ff9a4a 70%, #ff5d5a 94%);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.55em;
+}
+
+.table-bordered, .table-bordered td, .table-bordered th {
+  border: 2px solid #2F465D;
+}

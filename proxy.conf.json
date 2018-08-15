@@ -1,0 +1,11 @@
+{
+  "/server": {
+    "target": "http://pokerevaluator-213219.appspot.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/server" : ""
+    }
+  }
+}

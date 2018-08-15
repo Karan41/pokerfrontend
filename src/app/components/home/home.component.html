@@ -1,0 +1,37 @@
+<div class="container">
+  <form [formGroup]="pokerForm" (ngSubmit)="submitRegistration()" novalidate>
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <h4>
+        Enter your information below! (Ex: username: Adam, Cards: ad, As, aC, AH, 5d)
+      </h4>
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" formControlName="userName" required autofocus/>
+    </div>
+    <div class="form-group">
+      <label>Card 1</label>
+      <input type="text" class="form-control" formControlName="card1" maxlength="2" pattern="[AKQJTakqjt2-9][SDCHsdch]+" required/>
+    </div>
+    <div class="form-group">
+      <label>Card 2</label>
+      <input type="text" class="form-control" formControlName="card2" maxlength="2" pattern="[AKQJTakqjt2-9][SDCHsdch]+" required/>
+    </div>
+    <div class="form-group">
+      <label>Card 3</label>
+      <input type="text" class="form-control" formControlName="card3" maxlength="2" pattern="[AKQJTakqjt2-9][SDCHsdch]+" required/>
+    </div>
+    <div class="form-group">
+      <label>Card 4</label>
+      <input type="text" class="form-control" formControlName="card4" maxlength="2" pattern="[AKQJTakqjt2-9][SDCHsdch]+" required/>
+    </div>
+    <div class="form-group">
+      <label>Card 5</label>
+      <input type="text" class="form-control" formControlName="card5" maxlength="2" pattern="[AKQJTakqjt2-9][SDCHsdch]+" required/>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>
